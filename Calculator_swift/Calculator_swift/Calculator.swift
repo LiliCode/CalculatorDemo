@@ -87,12 +87,32 @@ struct Node {
 class Calculator: NSObject {
     var lastReult: Double = 0.0
     
-    static func evaluate(_ exp: String) -> Double {
+    static func evaluate(_ exp: String?) -> Double {
+        if exp == nil {
+            return Double(0)
+        }
+        
+        var expression: String = exp!
+        // 过滤空格
+        if let r = expression.range(of: " ") {
+            for index in r {
+                expression.remove(at: index)
+            }
+        }
+        
         // 主节点
         var mainNode = Node()
         // 解析节点
-        mainNode.parse(exp: exp)
+        mainNode.parse(exp: expression)
         // 几点节点
         return mainNode.compute()
     }
 }
+
+
+
+
+
+
+
+
