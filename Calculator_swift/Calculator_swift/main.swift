@@ -9,10 +9,8 @@
 import Foundation
 
 
-
-let result = Calculator.evaluate("3 * 2 - 4")
-
-
-print("result = \(result)")
+let expression = "21 / 3 + 45 - 2 * 8"
+let result = Calculator.evaluate(expression)
+print("\(expression) = \(result)")
 
 
