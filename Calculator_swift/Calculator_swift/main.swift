@@ -9,7 +9,7 @@
 import Foundation
 
 
-let expression = "21 / 3 + 45 - 2 * 8"
+let expression = "8 * 21 - 21 / 8"
 let result = Calculator.evaluate(expression)
 print("\(expression) = \(result)")
 

@@ -153,7 +153,7 @@ class Calculator: NSObject {
         var mainNode = Node()
         // 解析节点
         mainNode.parse(expression: expression as String)
-        // 几点节点
+        // 计算节点
         return mainNode.compute()
     }
 }
